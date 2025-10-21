@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz | Física no Trânsito</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="assets/css/img/certologo.png" alt="Logo Física no Trânsito"/>
+      
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="fisica-no-transito.html">Física no Trânsito</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="recursos.html">Código de trânsito brasileiro</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contato.php">Contato</a></li>
+    </ul>
+  </nav>
+
+  <header class="interno">
+    <h1>Quiz: Física no Trânsito</h1>
+  </header>
+
+  <main>
+    <section class="quiz-section">
+      <form id="quiz-form">
+        <div class="quiz-question">
+          <h3>1. O que explica a tendência de um passageiro continuar em movimento quando o carro freia bruscamente?</h3>
+          <label><input type="radio" name="q1" value="a"> Lei da Gravidade</label><br>
+          <label><input type="radio" name="q1" value="b"> Primeira Lei de Newton</label><br>
+          <label><input type="radio" name="q1" value="c"> Lei da Ação e Reação</label>
+        </div>
+        <div class="quiz-question">
+          <h3>2. Por que um caminhão precisa de mais distância para parar do que um carro pequeno?</h3>
+          <label><input type="radio" name="q2" value="a"> Por causa do atrito</label><br>
+          <label><input type="radio" name="q2" value="b"> Porque tem mais massa</label><br>
+          <label><input type="radio" name="q2" value="c"> Devido à energia potencial</label>
+        </div>
+        <div class="quiz-question">
+          <h3>3. O uso do cinto de segurança está relacionado a que conceito físico?</h3>
+          <label><input type="radio" name="q3" value="a"> Força centrípeta</label><br>
+          <label><input type="radio" name="q3" value="b"> Energia cinética</label><br>
+          <label><input type="radio" name="q3" value="c"> Pressão atmosférica</label>
+        </div>
+        <button type="button" class="btn-destaque" onclick="corrigirQuiz()">Enviar Respostas</button>
+      </form>
+      <div id="quiz-resultado"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="direitos">
+         <p>Projeto Educacional Física no Trânsito &copy; 2025</p>
+      <p>Developed by Clériston Mascarenhas</p>
+      </div>
+     
+      <img src="assets/css/img/uesb.png" alt="Placa de trânsito" style="height:50px;">
+      <img src="assets/css/img/sociedade-brasileira-de-fisica.jpg" alt="Placa de trânsito" style="height:50px;">
+      <img src="assets/css/img/acontece-mnpef.jpg" alt="Placa de trânsito" style="height:50px;">
+      <img src="assets/css/img/capes.png" alt="Placa de trânsito" style="height:50px;">
+    </div>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
+

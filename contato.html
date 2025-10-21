@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato | Física no Trânsito</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="assets/img/logo-trânsito.png" alt="Logo Física no Trânsito" height="48">
+      <span>Física no Trânsito</span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="fisica-no-transito.html">Física no Trânsito</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contato.php" class="active">Contato</a></li>
+    </ul>
+  </nav>
+
+  <header class="interno">
+    <h1>Fale Conosco</h1>
+  </header>
+
+  <main>
+    <section class="contato-section">
+      <?php
+        $msg = "";
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+          $nome = htmlspecialchars($_POST['nome']);
+          $email = htmlspecialchars($_POST['email']);
+          $mensagem = htmlspecialchars($_POST['mensagem']);
+
+          // Aqui você pode enviar por email ou salvar em arquivo
+          // mail('seu@email.com', 'Mensagem do site', $mensagem);
+          $msg = "<div class='msg-sucesso'>Mensagem enviada com sucesso! Em breve responderemos.</div>";
+        }
+      ?>
+      <?php if($msg) echo $msg; ?>
+      <form method="post" action="contato.php">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+        <button type="submit" class="btn-destaque">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Projeto Educacional Física no Trânsito &copy; 2024</p>
+      <img src="assets/img/rodape-placa.svg" alt="Placa de trânsito" style="height:32px;">
+    </div>
+  </footer>
+</body>
+</html>
